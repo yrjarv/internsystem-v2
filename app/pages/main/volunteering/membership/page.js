@@ -109,6 +109,20 @@ function MembershipPage() {
   }, [refresh]);
 
   const addNewMember = async () => {
+    const alreadyAdded = await prismaRequest({
+      model: "userMembership",
+      method: "find",
+      request: {
+        where: {
+          name: newMemberName,
+          semester_id: session.data.semester.id,
+        },
+      },
+    })
+    if (alreadyAdded.data.length > 0) {
+      alert("Duplicate member!")
+      return
+    }
     const response = await prismaRequest({
       model: "userMembership",
       method: "create",
