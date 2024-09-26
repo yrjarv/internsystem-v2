@@ -109,6 +109,7 @@ function MembershipPage() {
   }, [refresh]);
 
   const addNewMember = async () => {
+    // Check if users already added
     const alreadyAdded = await prismaRequest({
       model: "userMembership",
       method: "find",
@@ -123,6 +124,7 @@ function MembershipPage() {
       alert("Duplicate member!")
       return
     }
+    // Add new member
     const response = await prismaRequest({
       model: "userMembership",
       method: "create",
@@ -139,6 +141,8 @@ function MembershipPage() {
         setRefresh(!refresh);
       },
     });
+    setNewMemberName(""); // Clear input fields
+    setNewMemberComment("");
   };
 
   return (
