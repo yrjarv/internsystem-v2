@@ -7,6 +7,7 @@ import CustomAutoComplete from "@/app/components/input/CustomAutocomplete";
 import CustomNumberInput from "@/app/components/input/CustomNumberInput";
 import prismaRequest from "@/app/middleware/prisma/prismaRequest";
 import locale from "date-fns/locale/en-GB";
+import CustomMultiAutoComplete from "@/app/components/input/CustomMultiAutocomplete";
 
 export default function workLogInput(
   session,
@@ -92,7 +93,7 @@ export default function workLogInput(
   return (
     <Stack direction="column" spacing={1}>
       <Stack  direction="column" spacing={2}>
-        <CustomAutoComplete
+        <CustomMultiAutoComplete
           label="Registered for"
           dataLabel="name"
           subDataLabel="email"
