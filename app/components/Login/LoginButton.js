@@ -21,7 +21,7 @@ import { Person } from "@mui/icons-material";
 import { cybTheme } from "../themeCYB";
 import { useRouter } from "next/navigation";
 
-import { mdiPenguin } from '@mdi/js';
+import { mdiGhost } from '@mdi/js';
 import Icon from "@mdi/react";
 import Link from "next/link";
 // import { useEffect, useState } from "react";
@@ -40,7 +40,7 @@ export default function LoginButton(props) {
   const handleClick = (event) => {
     console.log("CLICK")
     if (session.status == "authenticated") {
-      router.push("/pages/main/profile");
+      router.push("/profile");
     } else {
       signIn();
     }
@@ -76,7 +76,7 @@ export default function LoginButton(props) {
                 {session.status == "authenticated" ? (
                   <Icon
                     alt="Image of user"
-                    path={mdiPenguin}
+                    path={mdiGhost}
                     color={cybTheme.palette.background.main}
                   />
                 ) : (
@@ -88,7 +88,7 @@ export default function LoginButton(props) {
                 key={`link_item_text_login`}
                 sx={{
                   color:
-                    currentPath == `/pages/main/profile`
+                    currentPath == `/profile`
                       ? cybTheme.palette.primary.main
                       : cybTheme.palette.text.primary,
                 }}
@@ -124,7 +124,7 @@ export default function LoginButton(props) {
               {session.status == "authenticated" ? (
                 <Avatar alt="Image of user" sx={{ ...avatarProps }}>
                   <Icon
-                    path={mdiPenguin}
+                    path={mdiGhost}
                     color={cybTheme.palette.background.main}
                   />
                 </Avatar>
