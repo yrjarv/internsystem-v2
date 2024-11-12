@@ -1,7 +1,8 @@
-# Sjekkliste for WCAG-sjekk (UU-tilsynet)
+# WCAG compliance test results
+Based off The Authority for Universal Design of ICT's checklist
 ## 1.1.1 Ikke-tekstlig innhold
 Gi brukeren et tekstalternativ for innhold som ikke er tekst.
-__All pictures lack alt-text, except the pictures of each board member. Needs fixing.__
+__All pictures lack alt-text, except the pictures of each board member. Needs to be fixed in Sanity__
 ## 1.2.1 Bare lyd og bare video (forhåndsinnspilt)
 Gi brukeren et alternativ når innholdet presenteres kun som video eller lyd.
 __n/a__
@@ -10,7 +11,7 @@ Tilby teksting for forhåndsinnspilt video med lyd.
 __n/a__
 ## 1.3.1 Informasjon og relasjoner
 Ting skal være kodet som det ser ut som. For eksempel skal en overskrift være kodet som en overskrift.
-__Mostly ok, but the largest header on the pages are always `<h4>`, which doesn't signal that it is the main header for the page.__
+__Mostly ok, but the largest header on the pages are always `<h4>`, which doesn't signal that it is the main header for the page. Needs to be fixed in Sanity.__
 ## 1.3.2 Meningsfylt rekkefølge
 Presenter innhold i en meningsfull rekkefølge.
 __ok__
@@ -49,7 +50,7 @@ Innhold skal ikke blinke mer enn tre ganger per sekund.
 __ok__
 ## 2.4.1 Hoppe over blokker
 Gi brukeren mulighet til å hoppe direkte til hovedinnholdet.
-__Lacking option to jump past AppBar items__
+__Lacking option to jump past AppBar items. #94__
 ## 2.4.2 Sidetitler
 Bruk nyttige og tydelige sidetitler.
 __ok__
@@ -61,7 +62,7 @@ Alle lenkers mål og funksjon fremgår tydelig av lenketeksten.
 __ok__
 ## 2.4.5 Flere måter
 Tilby brukeren flere måter å navigere på.
-__This is somewhat lacking (#93)__
+__This is somewhat lacking. #93__
 ## 2.4.6 Overskrifter og ledetekster
 Sørg for at ledetekster og overskrifter er beskrivende.
 __ok__
@@ -94,7 +95,7 @@ Det vises ledetekster eller instruksjoner når du har skjemaelementer som må fy
 __ok__
 ## 3.3.3 Forslag ved feil
 Dersom feil blir oppdaget automatisk, gi brukeren et forslag til hvordan feilen kan rettes.
-__Example: No hint is given when using 0 vouchers or logging 0 hours, the input field only becomes red.__
+__Example: No hint is given when using 0 vouchers or logging 0 hours, the input field only becomes red. #95__
 ## 3.3.4 Forhindring av feil (juridiske feil, økonomiske feil, datafeil)
 For sider som medfører juridiske forpliktelser må det være mulig å kunne angre, kontrollere eller bekrefte dataene som sendes inn.
 __N/A__
@@ -103,4 +104,4 @@ Alle sider skal være uten store kodefeil.
 __ok__
 ## 4.1.2 Navn, rolle, verdi
 Alle komponenter har navn og rolle bestemt i koden.
-__A lot of components do not have name and role__
+__A lot of components do not have name and role. #96__
